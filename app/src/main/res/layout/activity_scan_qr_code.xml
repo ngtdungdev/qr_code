@@ -1,52 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:orientation="vertical">
 
-    <TableLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TableRow
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/textView2"
-                android:layout_width="415dp"
-                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
                 android:background="#00BCD4"
                 android:gravity="center"
                 android:text="QR Code Scannel"
                 android:textSize="24sp"
                 android:textStyle="bold" />
-        </TableRow>
 
-        <TableRow
+        </FrameLayout>
+
+        <com.journeyapps.barcodescanner.DecoratedBarcodeView
+            android:id="@+id/barcode_scanner"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
-            <com.journeyapps.barcodescanner.DecoratedBarcodeView
-                android:id="@+id/barcode_scanner"
-                android:layout_width="match_parent"
-                android:layout_height="740dp">
+        </com.journeyapps.barcodescanner.DecoratedBarcodeView>
 
-            </com.journeyapps.barcodescanner.DecoratedBarcodeView>
-        </TableRow>
-
-        <TableRow
+        <Button
+            android:id="@+id/btResult"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:backgroundTint="#00bfff"
+            android:text="Button" />
 
-            <Button
-                android:id="@+id/btResult"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Button" />
-        </TableRow>
-    </TableLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

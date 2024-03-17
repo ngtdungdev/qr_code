@@ -12,8 +12,8 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:icon="@drawable/baseline_qr_code_scanner_24"
+        android:label="QR CODE"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Qr_code"
@@ -28,6 +28,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".qrcode.QRCodeActivity" android:exported="false"/>
-        <activity android:name=".scanQrcode.CameraActivity" android:exported="false"/>
+        <activity android:name=".scanQrcode.ScanQrcodeActivity" android:exported="false"/>
     </application>
 </manifest>

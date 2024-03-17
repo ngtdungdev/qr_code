@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.example.qr_code"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.qr_code"
